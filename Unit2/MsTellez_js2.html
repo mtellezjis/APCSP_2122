@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<style>
+		.tableClass {
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<h1> Hello Document.innerHTML</h1>
+<table id="table1">
+	<tr>
+		<td> COl 1</td>
+		<td> Col 2</td>
+	</tr>
+</table>
+<button onclick="addRow()"> Add row</button>
+
+</body>
+<script>
+	function addRow(){
+		document.getElementById("table1").innerHTML += "<tr> <td>Cell 3</td> <td>Cell 4</td></tr>";
+		document.getElementById("table1").className = "tableClass"
+	}
+</script>
+</html>
