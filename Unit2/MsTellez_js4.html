@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.green {
+			background-color: chartreuse;
+		}
+	</style>
+</head>
+<body>
+	<button id="colorBtn" onclick="color()"  >Color me</button>
+	<button onclick="disable()"> Disable </button>
+
+	<table id="table1" >
+		<tr>
+			<td>One</td>
+			<td>Two</td>
+		</tr>
+		<tr>
+			<td>One</td>
+			<td>Two</td>
+		</tr>
+	</table>
+
+</body>
+
+<script>
+	function color(){
+		document.getElementById("table1").className = "green";
+	}
+
+	function disable(){
+		document.getElementById("colorBtn").disabled = "disabled";
+	}
+</script>
+</html>

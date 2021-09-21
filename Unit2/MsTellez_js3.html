@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<H1> This is the title</H1>
+	<button onclick="addTitle()">Add Title</button>
+	<p id="firstP"></p>
+	<h3 id="firstH3"> </h3>
+
+</body>
+
+<script>
+	function addTitle(){
+		document.getElementById("firstP").innerHTML = "<h3> This is a subtitle </h3>";
+		document.getElementById("firstH3").innerHTML = "This is a subtitle";
+	}
+</script>
+</html>

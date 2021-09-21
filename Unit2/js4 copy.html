@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Author: Mery Tellez - (really Matthew) -->
+<head>
+	<style>
+		.table{
+			background-color: red;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>Button Prac</title>
+</head>
+<body>
+	<button id = "b" onclick = "colorMe()">Color Me</button>
+	<button id = "c" onclick = "deactivate()">Disable Button</button>
+
+	<table id = "a">
+		<tr>
+			<td>1</td><td>2</td>
+		</tr>
+		<tr>
+			<td>3</td><td>4</td>
+		</tr>
+	</table>
+</body>
+	<script>
+
+		function colorMe(){
+			document.getElementById("a").className = "table"
+		}
+		function deactivate(){
+		    if(document.getElementById("b").disabled) {
+		        document.getElementById("b").disabled = false;
+                document.getElementById("c").innerHTML = "Disable Button";
+		    } else {
+                document.getElementById("b").disabled = "disable";
+                document.getElementById("c").innerHTML = "Enable Button";
+		    }
+		}
+	</script>
+</html>
