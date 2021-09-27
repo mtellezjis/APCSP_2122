@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input type="text" id="number">
+	<input type="text" id="number1">
+	<button onclick="add1()"> Add 1</button>
+	<button onclick="modulus()">Modulus</button>
+
+	<p id="result"></p>
+
+</body>
+<script>
+	//global variables
+	let output = document.getElementById("result");
+	let number = document.getElementById("number").value;
+	let number1 = document.getElementById("number1").value;
+
+	function add1(){
+		//.value captures the value inside of an input tag
+
+		//number+=1;  this is an alternative
+		number++;
+		output.innerHTML = number;
+
+	}
+	function modulus(){
+
+	}
+</script>
+
+</html>
