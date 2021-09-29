@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input id="min" type="text">
+	<input id="max" type="text">
+	<button onclick="random01()" >Random 0-1</button>
+	<button onclick="randomRange()">Random Range</button>
+	<p id="result"></p>
+
+
+</body>
+<script>
+	function random01(){
+		document.getElementById("result").innerHTML = Math.random();
+	}
+
+	function randomRange(){
+		let min = document.getElementById("min").value;
+		let max = document.getElementById("max").value;
+		let random = Math.floor(Math.random()*(max-min))+min;
+		document.getElementById("result").innerHTML = random;
+	}
+</script>
+</html>
