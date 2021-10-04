@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input type="text" id="textInput">
+	<button onclick="countCh()">Count Characters</button>
+	<button onclick="search()">Search</button>
+
+</body>
+<script>
+	//var text = document.getElementById("textInput").value; // this a text by default
+
+
+	function countCh(){
+		let text = document.getElementById("textInput").value; // this a text by default
+		alert("The text has "+ text.length + " characters");
+	}
+
+	function search(){
+		let searchValue = prompt("Type a word: ");
+		let text = document.getElementById("textInput").value;
+		let message = "The value is found: " + (text.indexOf(searchValue)> -1) +
+				" at position " + text.indexOf(searchValue);
+		//alert(text.indexOf(searchValue));
+		alert(message);
+	}
+
+</script>
+</html>
