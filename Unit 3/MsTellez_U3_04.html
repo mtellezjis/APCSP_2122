@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<input id="user" type="text">
+<input id="pass" type="password">
+
+<button onclick="login()">Login</button>
+
+</body>
+<script>
+	const PASS = "safepassword";
+	const USER = "admin";
+
+	function login() {
+		let input = document.getElementById("pass").value;
+		let user = document.getElementById("user").value;
+		/*if (input == PASS &&  user == USER) {
+			alert("Welcome.  Access granted");
+		} else {
+			alert("Invalid username or password");
+		}*/
+
+		if(user == USER){
+			if(input == PASS){
+				alert("Welcome.  Access granted");
+			}
+			else{
+				alert("Incorrect Password");
+			}
+
+		}
+		else{
+			alert("Incorrect Username");
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input type="text" id="sub1" onchange="convert1()"> <h4 id="sub1letter"></h4>
+
+
+</body>
+<script>
+	function convert1(){
+		let input = parseFloat(document.getElementById("sub1").value);
+		if(input >= 90){
+			document.getElementById("sub1letter").innerHTML = "A*";
+		}
+		else if(input>=80){
+			
+		}
+	}
+</script>
+</html>

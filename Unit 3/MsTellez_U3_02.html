@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input id="pass" type="password">
+	<button onclick="login()">Login</button>
+
+</body>
+<script>
+	const PASS = "safepassword";
+
+	function login() {
+		let input = document.getElementById("pass").value;
+		if (input == PASS) {
+			alert("Welcome.  Access granted");
+		} else {
+			alert("Incorrect password");
+		}
+	}
+</script>
+</html>
