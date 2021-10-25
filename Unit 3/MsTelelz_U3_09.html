@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<label for="min">Minimum: </label> <input id="min" type="text">
+	<label for="max">Maximum: </label> <input id="max" type="text">
+	<button onclick="createTable()">Create Table</button>
+	<table border="1" id="table1">
+
+	</table>
+
+</body>
+<script>
+	function createTable(){
+		//min is an HTML ID
+		//minVariable is a JS variable
+		let minVariable = parseInt(document.getElementById("min").value);
+		let maxVariable = parseInt(document.getElementById("max").value);
+
+
+		let sum = 0;
+
+		for (let i = minVariable; i <= maxVariable; i++){
+			//challenge! create the table from here!
+			document.getElementById("table1").innerHTML += "<tr><td>" + i + "</td></tr>";
+			sum = sum + i;  //accumulation technique
+		}
+
+		document.getElementById("table1").innerHTML += "<tr><td>"+ sum + "</td></tr>";
+	}
+</script>
+</html>
