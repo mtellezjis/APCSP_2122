@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<h1> ATM login</h1>
+
+</body>
+<script>
+	const password = "123456";
+
+	//Option1
+	let numAttempt = 0;
+	while(numAttempts < 100) {
+		let attempt = prompt("Type your PIN number: ");
+		numAttempts++;
+		if(attempt == password){
+			numAttempts = 100;
+		}
+	}
+
+	//Option2
+	let correct = false;
+	while(correct == false){
+		let attempt = prompt("Type your PIN number: ");
+		if(attempt == password){
+			correct = true;
+		}
+	}
+
+	//Option3
+	let attempt = "";
+	while(attempt != password){
+		attempt = prompt("Type your PIN number: ");
+	}
+
+	//Secure Option (Stops after 3 attempts)
+	let times = 3;
+	while(times>0 || attempt != password){
+		attempt = prompt("Type your password");
+		times--;
+	}
+
+
+
+</script>
+</html>
