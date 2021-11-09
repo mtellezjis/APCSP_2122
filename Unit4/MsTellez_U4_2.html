@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<h1>Basic Math</h1>
+<input type="text" id="num1">
+<input type="text" id="num2">
+<button onclick="calculate()">Calculate</button>
+
+</body>
+<script>
+	function calculate(){
+		let number1 = parseFloat(document.getElementById("num1").value);
+		let number2 = parseFloat(document.getElementById("num2").value);
+
+		let result = document.createElement("p");
+		//invoke function substraction
+		let sub = substraction(number1,number2);
+
+		result.innerHTML = "Substraction = " + sub + "<br> Addition " + add(number1, number2);
+		document.body.appendChild(result);
+	}
+
+	function substraction(num1,num2){
+		return num1-num2;
+	}
+
+	function multiply(num1,num2){
+
+	}
+
+	function divide(num1,num2){
+
+	}
+
+	//definition of a parameter function
+	function add(num1,num2){
+		return num1+num2;
+	}
+
+</script>
+
+</html>
