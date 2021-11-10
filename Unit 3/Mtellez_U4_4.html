@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<button onclick="greeting('morning')" >Morning</button>
+<button onclick="greeting('afternoon')" >Afternoon</button>
+<button onclick="greeting('night')" >Night</button>
+<input id="customTime" type="text">
+<button onclick="greeting(document.getElementById('customTime').value)"> Custom</button>
+
+</body>
+
+<script>
+	function greeting(time){
+		alert("Good "+ time);
+	}
+</script>
+</html>
