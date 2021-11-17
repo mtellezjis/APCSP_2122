@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<input id="name" type="text">
+<input type="text" id="gradeLevel">
+<input type="text" id="age">
+<button onclick="display(document.getElementById('name').value,
+				document.getElementById('gradeLevel').value,
+				document.getElementById('age').value)"></button>
+<p id="result"> </p>
+</body>
+
+<script>
+	var person;
+	function display(n, gl, age){
+		 person = {
+			name : n,
+			age: age,
+			gradeLevel : gl
+		}
+
+		document.getElementById("result").innerHTML = person.name + ", " +
+				person.gradeLevel + ", " + person.age;
+	}
+
+
+
+</script>
+</html>
