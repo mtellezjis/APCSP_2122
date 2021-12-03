@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input id="index">
+	<button onclick="alertElement()">Click</button>
+</body>
+<script>
+
+	//instantiate an array of numbers, String, varied
+	let numbers = [3,4,54,6];
+	let names = ["Stanley", "YJ", "Natalie"];
+	let varied = ["Matthew", 34, true, 23.4]; //elements of different type
+
+	//accessing elements
+	alert(names[1]);  //alert YJ   () parenthesis - functions    [] square bracket - arrays   {} curly bracket - sections of code
+	alert(numbers[2]); //alert 54
+
+	alert(numbers);  // alerts the entire list with values separeted by commas
+
+	//Change elements
+	names[2] = "Felisca";
+	alert(names);
+
+	//Change "Matthew" (varied) for "YJ" (names)
+	varied[0] = names[1];
+	alert(varied);
+
+	//alert an item based on user input
+	function alertElement(){
+		let index = parseInt(document.getElementById("index").value);
+		alert(varied[index]);
+	}
+
+
+</script>
+</html>
