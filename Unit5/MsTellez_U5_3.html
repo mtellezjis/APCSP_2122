@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Class List</title>
+</head>
+<body>
+<label for="name">Name: </label><input type="text" id="name"> <br>
+<label for="lastName">Lastname: </label> <input type="text" id="lastName"> <br>
+<label for="phone">Phone Number: </label> <input type="text" id="phone"> <br>
+<label for="age">Age: </label> <input id="age"> <br>
+<button onclick="addStudent()">Add Student</button>
+
+</body>
+<script>
+	let studentInfo = [];
+
+	function addStudent(){
+		studentInfo.push(document.getElementById("phone").value);
+		studentInfo.push(document.getElementById("age").value);
+		studentInfo.push(document.getElementById("lastName").value);
+		studentInfo.push(document.getElementById("name").value);
+		alert(studentInfo.length);  //4
+		let table = document.createElement("table");
+		document.body.appendChild(table);
+		table.border = 1;
+		/*table.innerHTML += "<tr> <td>" + studentInfo.pop() +"</td>" +
+				"<td>" +  studentInfo.pop() + "</td>" +
+				"<td>" + studentInfo.pop() + "</td>" +
+				"<td>" + studentInfo.pop() + "</td> </tr>";*/
+
+		for(let i=0; i<4; i++){
+			table.innerHTML += "<td>" + studentInfo.pop() + "</td>";
+		}
+
+
+		document.getElementById("name").value = "";
+		document.getElementById("lastName").value = "";
+		document.getElementById("age").value = "";
+		document.getElementById("phone").value = "";
+		alert(studentInfo.length);
+	}
+</script>
+</html>
