@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<p id="result"></p>
+	<button onclick="addArrays()">Add arrays</button>
+
+</body>
+<script>
+	let array1 = [0,1,2,3,4];
+	let array2 = [5,3,2,5,4];
+	let result =[];
+
+	function addArrays(){
+		array1.forEach(add);
+		document.getElementById("result").innerHTML = result;
+	}
+
+	function add(item, index, array){
+		//result.push(array[index] + array2[index]);
+		//result.push(array1[index] + array2[index])
+		result.push(item + array2[index]);
+	}
+</script>
+</html>
