@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<p id="output"></p>
+<label for="name">Name: </label><input type="text" id="name">
+<label for="age">Age: </label><input type="text" id="age">
+<label for="grade">Grade Level: </label><input type="text" id="grade">
+<button onclick="submit()">Submit</button>
+
+
+</body>
+<script>
+	let oldData = localStorage.getItem("userData");
+	if(oldData == null){
+		document.getElementById("output").innerHTML = "Welcome Anonymous";
+	}
+	else{
+		let oldDataArray = JSON.parse(oldData);
+		document.getElementById("output").innerHTML = "Welcome " + oldDataArray[0];
+	}
+
+	function submit(){
+		let data = [document.getElementById("name").value,
+					document.getElementById("age").value,
+					document.getElementById("grade").value];
+		alert(data);
+		const json1 = localStorage.getItem("userData") + "," + JSON.stringify(data);
+		localStorage.setItem("userData",json1);
+	}
+</script>
+</html>
